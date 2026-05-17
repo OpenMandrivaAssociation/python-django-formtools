@@ -3,13 +3,14 @@
 %bcond tests 1
 
 Name:		python-django-formtools
-Version:	2.5.1
+Version:	2.6.1
 Release:	1
-Source0:	https://files.pythonhosted.org/packages/source/d/%{module}/%{module}-%{version}.tar.gz#/%{name}-%{version}.tar.gz
 Summary:	A set of high-level abstractions for Django forms
-URL:		https://pypi.org/project/django-formtools/
 License:	BSD-3-Clause
 Group:		Development/Python
+URL:		https://github.com/jazzband/django-formtools
+Source0:	%{URL}/archive/%{version}/%{name}-%{version}.tar.gz
+
 BuildSystem:	python
 BuildArch:	noarch
 BuildRequires:	python%{pyver}dist(pip)
@@ -33,6 +34,9 @@ Documentation for the %{name} package.
 %autosetup -n %{module}-%{version} -p1
 # Remove bundled egg-info
 rm -rf %{oname}.egg-info
+
+%build -p
+export SETUPTOOLS_SCM_PRETEND_VERSION=%{version}
 
 %install
 %py_install
