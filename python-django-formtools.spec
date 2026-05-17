@@ -57,7 +57,6 @@ export PYTHONPATH=`pwd`
 %doc README.rst
 %license LICENSE
 %{python_sitelib}/formtools
-%{python_sitelib}/tests/wizard
 %{python_sitelib}/%{oname}-%{version}.dist-info
 
 %files -n python-%{module}-doc
