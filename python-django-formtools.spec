@@ -3,7 +3,7 @@
 %bcond tests 1
 
 Name:		python-django-formtools
-Version:	2.6.1
+Version:	2.7
 Release:	1
 Summary:	A set of high-level abstractions for Django forms
 License:	BSD-3-Clause
@@ -31,7 +31,7 @@ Requires:	%{name} = %{version}-%{release}
 Documentation for the %{name} package.
 
 %prep
-%autosetup -n %{module}-%{version} -p1
+%autosetup -n django-formtools-2.7 -p1
 # Remove bundled egg-info
 rm -rf %{oname}.egg-info
 
