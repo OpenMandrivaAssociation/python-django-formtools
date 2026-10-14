@@ -4,7 +4,7 @@
 
 Name:		python-django-formtools
 Version:	2.7
-Release:	1
+Release:	2
 Summary:	A set of high-level abstractions for Django forms
 License:	BSD-3-Clause
 Group:		Development/Python
@@ -25,7 +25,7 @@ A set of high-level abstractions for Django forms
 
 %package -n python-%{module}-doc
 Summary:	Documentation for %{name}
-Requires:	%{name} = %{version}-%{release}
+Requires:	%{name} = %{EVRD}
 
 %description -n python-%{module}-doc
 Documentation for the %{name} package.
